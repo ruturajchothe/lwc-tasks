@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="lightning Record view and edit form tags">
+        <lightning-layout>
+            <lightning-layout-item size=6 padding="around-medium">
+                <lightning-record-edit-form object-api-name="Electronics_Item__c" onsuccess={successHandler}>
+                    <p> <lightning-input-field field-name="Name"></lightning-input-field> </p>
+                    <p> <lightning-input-field field-name="Price__c"></lightning-input-field> </p>
+                    <p> <lightning-input-field field-name="Type__c"></lightning-input-field> </p>
+                    <p> <lightning-button type="submit" variant="brand" name="save" label="Create a Record"></lightning-button> </p>
+                </lightning-record-edit-form>
+
+            </lightning-layout-item>
+        
+            <lightning-layout-item size=6 padding="around-medium">
+                <lightning-record-view-form record-id={recordID} object-api-name="Electronics_Item__c">
+                    <p> <lightning-output-field field-name="Name"></lightning-output-field> </p>
+                    <p> <lightning-output-field field-name="Price__c"></lightning-output-field> </p>
+                    <p> <lightning-output-field field-name="Type__c"></lightning-output-field> </p>
+                    
+                </lightning-record-view-form>
+            </lightning-layout-item>
+        
+        </lightning-layout>
+
+    </lightning-card>
+</template>

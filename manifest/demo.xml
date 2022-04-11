@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>calValues</members>
+        <members>childComp</members>
+        <members>customEventDemoChild</members>
+        <members>customEventDemoParent</members>
+        <members>familyInfoChildComp</members>
+        <members>fetchDataUsingApexClass</members>
+        <members>fetchNumberOfRecords</members>
+        <members>generalInformationChildComp</members>
+        <members>getterCodingChallenge</members>
+        <members>helloWorld</members>
+        <members>ldsDemo1</members>
+        <members>ldsDemo2</members>
+        <members>ldsDemo3</members>
+        <members>lifeCycleHooksDemo</members>
+        <members>pANApplicationParentComp</members>
+        <members>paginationInLWC</members>
+        <members>parentComp</members>
+        <members>personalInfoChildComp</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>53.0</version>
+</Package>

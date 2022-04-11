@@ -1,0 +1,21 @@
+<template>
+    <div  class="slds-align_absolute-center">
+        <lightning-card style="width: 60%;" title="Create New PAN Application">
+            
+            <!-- General Info Component -->
+            <h3 class="slds-section-title--divider" style="margin: 0px">General Information</h3>
+            <c-general-information-child-comp ongeneralinfoevent={generalInfoEventHandler}></c-general-information-child-comp>
+            
+            <!-- Personal Info Component -->
+            <h3 class="slds-section-title--divider" style="margin: 0px">Personal Information</h3>
+            <c-personal-info-child-comp onpersonalinfoevent={personalInfoEventHandler}></c-personal-info-child-comp>
+            
+            <!-- Family Info Component -->
+            <h3 class="slds-section-title--divider" style="margin: 0px">Family Information</h3>
+            <c-family-info-child-comp onfamilyinfoevent={familyInfoEventHandler}></c-family-info-child-comp>
+            
+            <!-- Record Submit Button -->
+            <lightning-button label="Submit Application" name="submit" class="slds-align_absolute-center" variant="brand" onclick={submitTheRecord}></lightning-button>
+        </lightning-card>
+    </div>
+</template>

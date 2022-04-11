@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-box slds-theme_shade slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        
+            <lightning-layout class="overflow-scroll">
+                <lightning-layout-item padding="around-small">
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <b>Name</b><br/>
+                        {playerDetails.name}
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <b>Sport</b><br/>
+                        {playerDetails.sport}
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">
+                        <b>Position</b><br/>
+                        {playerDetails.position}
+                    </div>
+                </lightning-layout-item>
+                
+            </lightning-layout>
+
+    </div>
+</template>
+
+
+

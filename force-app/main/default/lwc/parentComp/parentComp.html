@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-size_2-of-4">
+        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small custom-bg-color">
+            <b style="color:white;">Parent-Child communication example</b>
+
+            <lightning-input label="Player Name" name="name" onchange={inputHandler}></lightning-input>
+            <lightning-input label="Sport" name="sport" onchange={inputHandler}></lightning-input>
+            <lightning-input label="Position" name="position" onchange={inputHandler}></lightning-input>
+
+            <lightning-button label="Add Child" onclick={addChildHandler}></lightning-button>
+
+                <template for:each={playerArrayGetter} for:item='player'>
+                    <p key={player}>
+                        <c-child-comp player-details={player}></c-child-comp>
+                    </p>
+                </template>
+        </div>
+    </div>
+</template>

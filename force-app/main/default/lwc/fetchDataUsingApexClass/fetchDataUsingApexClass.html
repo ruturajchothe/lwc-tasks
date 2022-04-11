@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Using Apex classes to fetch data in LWC">
+        <lightning-layout>
+            <lightning-layout-item size=12 padding="around-small">
+                <template if:true={receivedResponse}>
+                    <!-- <template for:each={eItemsArray.data} for:item="eItem">
+                        <div key={eItem.id}>
+                            <div class="slds-p-around_medium lgc-bg"> <lightning-tile label={eItem.Name} href="/path/to/somewhere">
+        
+                                <p class="slds-truncate" title=(eItem.Price__c)>{eItem.Price__c}</p>
+                                <p class="slds-truncate" title=(eItem.Type__c)>{eItem.Type__c}</p>
+                                
+                                
+                                </lightning-tile>
+                                
+                                </div>
+                        </div>
+                    </template> -->
+        
+                    <div style="height: 300px;">
+                        <lightning-datatable
+                                key-field="id"
+                                data={eItemsArray.data}
+                                columns={columns}
+                                show-row-number-column
+                                row-number-offset=0>
+                        </lightning-datatable>
+                    </div> 
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

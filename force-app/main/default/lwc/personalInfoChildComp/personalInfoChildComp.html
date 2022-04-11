@@ -1,0 +1,25 @@
+<template>
+
+    <lightning-layout>
+        <lightning-layout-item size=12 >
+        
+            <lightning-card >
+                <div class="slds-grid slds-gutters" style="padding:10px;">
+                
+                    <div class="slds-col">
+                        <lightning-input label="Date of Birth" name="DOB" type="date" value={today} onchange={DOBHandler}></lightning-input>
+                        <lightning-input label="Mobile Number" name="mobileNo" type="number" onchange={mobileNoHandler}></lightning-input>
+                        
+                    </div>
+
+                    <div class="slds-col">
+                        <lightning-input label="Aadhar Number" name="aadharNo" type="number" onchange={aadharHandler}></lightning-input>
+                        <lightning-input label="Email" name='email' type="email" onchange={fireEvent}></lightning-input>
+                    </div>
+                    
+                </div>        
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>

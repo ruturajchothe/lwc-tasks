@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Pagination in LWC" icon-name="standard:account">
+        
+        <lightning-layout>
+            <lightning-layout-item size=12 padding="around-small">
+                <template if:true={receivedResponse}>
+                    <!-- Data table to display the records output -->
+                    <div style="height: 300px;">
+                        <lightning-datatable
+                                key-field="id"
+                                data={accountsData}
+                                columns={columns}
+                                show-row-number-column
+                                row-number-offset={rowOffset}>
+                        </lightning-datatable>
+                    </div> 
+                    <!-- Buttons for pagination -->
+                    <div style="margin-top: 5px;" class="slds-align_absolute-center">
+                        <lightning-button variant="brand-outline" label="First Page"  onclick={firstPageHandler} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button variant="brand-outline" label="Previous"  onclick={previousHandler} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button variant="brand-outline" label={returnPageInfo} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button variant="brand-outline" label="Next"  onclick={nextHandler} class="slds-m-left_x-small"></lightning-button>
+                        <lightning-button variant="brand-outline" label="Last Page"  onclick={lastPageHandler} class="slds-m-left_x-small"></lightning-button>
+                    </div>
+                </template>
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-card>
+</template>

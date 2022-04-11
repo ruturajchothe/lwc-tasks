@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Fetching data using apex class without wire decorator">
+        <lightning-input type="number" label="Number of Accounts" onchange={changeHandler}></lightning-input>
+        <p>
+            <lightning-button label="Get Accounts" onclick={getRecords}> </lightning-button>
+        </p>
+        
+        <template if:true={responseRecieved}> 
+            <!-- <template for:each={EItemsArray} for:item="eItem">
+                <div key={eItem.id}>
+                    <div class="slds-p-around_medium lgc-bg">
+                        <lightning-tile label={eItem.Name} href="/path/to/somewhere">
+                            <p class="slds-truncate" title={eItem.Price__c}>{eItem.Price__c}</p>
+                        </lightning-tile>
+                    </div>
+                </div>
+            </template> -->
+            <div style="height: 300px;">
+                <lightning-datatable
+                        key-field="id"
+                        data={EItemsArray}
+                        columns={columns}
+                        show-row-number-column
+                        row-number-offset=0>
+                </lightning-datatable>
+            </div>
+        </template>
+    </lightning-card>
+</template>

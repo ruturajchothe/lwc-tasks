@@ -1,0 +1,20 @@
+<template>
+
+    <lightning-card title="Meeting Rooms">
+
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small">
+                <ul>
+                    <template for:each={meetingRoomsinfo} for:item="room">
+                        <li key={room.roomName} style="padding: 10px">
+                            <c-custom-event-demo-child ontileclick={onTileSelectHandler} meeting-room-info={room} show-room-info></c-custom-event-demo-child>
+                        </li>
+                    </template>
+                </ul>
+            </lightning-layout-item>
+            <lightning-layout-item size="8" padding="around-small">
+                You have selected: {selectedMeetingRoom}
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

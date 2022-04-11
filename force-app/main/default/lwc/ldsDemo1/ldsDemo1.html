@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="LDS DEMO createRecord method">
+        <lightning-layout>
+            <lightning-layout-item size=6>
+            
+                <lightning-card title="Add new Electronics Item">
+                    <div class="container">
+                    
+                        <lightning-input label="Item Name" name="name" onchange={nameHandler}></lightning-input>
+                        <lightning-input label="Item Price" name="price" type="number" onchange={priceHandler}></lightning-input>
+                        <lightning-input label="Item Type" name="type" onchange={typeHandler}></lightning-input>
+
+                        <lightning-button label="Add Item" onclick={addItemHandler}></lightning-button>
+                    </div>        
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

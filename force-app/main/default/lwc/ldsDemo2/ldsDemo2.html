@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="LDS DEMO getRecord method">
+        <lightning-layout>
+            <lightning-layout-item size=6 padding="around-small">
+                <lightning-input label="Record ID" name="recordID" onchange={recordIdHandler} placeholder="Record ID"></lightning-input>
+                <lightning-button label="Show Record" variant="Brand" onclick={showRecord}></lightning-button>
+                
+                <p>recordID: {recordID}</p>
+
+                <template if:true={eiTemRecord.data}>
+                    <div class="slds-m-around_medium">
+                        <p>recordID: {recordID}</p>
+                        <p>eItem Name: {eItemName}</p>
+                        <p>Price: {eItemPrice}</p>
+                        <p>Type: {eItemType}</p>
+                    </div>
+                </template>
+
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

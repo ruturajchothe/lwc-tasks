@@ -1,0 +1,25 @@
+<template>
+    
+    <lightning-layout>
+        <lightning-layout-item size=12 >
+        
+            <lightning-card >
+                <div class="slds-grid slds-gutters" style="padding:10px;">
+                
+                    <div class="slds-col">
+                        <lightning-input label="Father's Full Name" name="fatherName" onchange={fathersNameChangeHandler}></lightning-input>
+                        <lightning-input label="Mother's Full Name" name="mothersName" onchange={mothersNameChangeHandler}></lightning-input>
+                        
+                    </div>
+
+                    <div class="slds-col">
+                        <lightning-input label="PAN of Father" name="PANofFather" onchange={fathersPANHandler}></lightning-input>
+                        <lightning-input label="PAN of Mother" name='PANofMother' onchange={fireEvent}></lightning-input>
+                    </div>
+                    
+                </div>        
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>

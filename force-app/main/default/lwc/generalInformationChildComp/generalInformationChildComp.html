@@ -1,0 +1,46 @@
+<template>
+
+    <lightning-layout>
+        <lightning-layout-item size=12>
+        
+            <lightning-card >
+                <div class="slds-grid slds-gutters" style="padding:10px;">
+                
+                    <div class="slds-col">
+                        <!-- <lightning-input label="First Name" name="fName" onchange={fNameHandler}></lightning-input> -->
+                            
+                        
+                        <!-- Trying out event in below ilne for first name input -->
+                        <lightning-input label="First Name" name="fName" onchange={fNameHandler}></lightning-input>
+
+
+
+
+                        <lightning-input label="Last Name" name="lName" onchange={lNameHandler}></lightning-input>
+                    </div>
+
+                    <div class="slds-col">
+                        <lightning-combobox
+                            name="nationality"
+                            label="Nationality"
+                            value={nationality}
+                            placeholder="Select Nationality"
+                            options={nationalityOptions}
+                            onchange={nationalityHandler} ></lightning-combobox>
+                      
+                        <lightning-combobox
+                            name="gender"
+                            label="Gender"
+                            value={gender}
+                            placeholder="Select Gender"
+                            options={genderOptions}
+                            onchange={fireEvent} ></lightning-combobox>
+                    </div>
+                    
+                </div>        
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>
+

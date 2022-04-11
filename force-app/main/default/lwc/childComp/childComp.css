@@ -1,0 +1,10 @@
+.custom-box {
+    background-color: #6ae9c9a2;
+}
+.overflow-scroll{
+    overflow: scroll;
+}
+
+.custom-box:hover{
+    background-color: rgb(231, 91, 91)
+}

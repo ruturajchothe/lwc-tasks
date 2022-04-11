@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Calculator">
+        <div class="container">
+        <lightning-input label="First Value" name="firstValue" onchange={inputHandler} type="number"></lightning-input>
+        <lightning-input label="Second Value" name="secondValue" onchange={inputHandler} type="number"></lightning-input>
+        <lightning-button label="Add" onclick={addHandler}></lightning-button>
+        <lightning-button label="Substract" onclick={subHandler}></lightning-button>
+        <lightning-button label="Multiply" onclick={mulHandler}></lightning-button>
+        <lightning-button label="Divide" onclick={divHandler}></lightning-button>
+        <p>Output is: {result}</p>
+    </div>
+    </lightning-card>
+
+</template>
